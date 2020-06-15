@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&family=Shadows+Into+Light&display=swap');
+
+/* FONTS */
+
+
+/* 
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Roboto', sans-serif; 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--off);
+}
+
+:root {
+    --teal: #009688;
+    --amber: #ffc107;
+    --off: #efebe9;
+    --red: #ef5350;
+}
+
+.bg-amarelo {
+    background-color: var(--off);
+}
+
+.on-tablet {
+    display: flex;
+}
+
+input .success {
+    border: 2px solid var(--teal)!important;
+}
+
+input .danger {
+    border: 2px solid var(--red)!important;
+}
+
+header {
+    width: 100%;
+    min-height: 30px;
+    background-color: var(--teal);
+    padding: 1.1rem 0;
+}
+
+.logo {
+    width: 350px;
+    height: 80px;
+    padding: 0 2rem;
+}
+
+.logo img {
+    width: 80%;
+}
+
+.nav {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    padding-right: 3rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu ul li {
+    padding: 0 1rem;
+}
+
+.menu nav ul li a {
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-mobile img {
+    width: 20%;
+}
+
+.btn-toggle {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+}
+
+.nav-mobile i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-top: .5rem;
+}
+
+.menu-mobile {
+    position: absolute;
+    left: -1024px;
+    top: 0;
+    width: 100%;
+    background-color: var(--teal);
+    min-height: 100vh;
+    transition: .8s;
+}
+
+.menu-mobile ul {
+    width: 100%;
+}
+
+.menu-mobile ul li {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.menu-mobile ul li a {
+    text-decoration: none;
+    color: var(--off);
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-mobile i {
+    font-size: 1.8rem;
+}
+
+.open {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.closed {
+    position: absolute;
+    left: -400px;
+    top: 0;
+}
+
+.box-form {
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2rem 2rem 4rem 2rem;
+    width: 80%;
+    height: auto;
+}
+
+.box-form h1 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.box-form input,
+select,
+textarea {
+    width: 100%;
+    min-height: 30px;
+    border: none;
+    border-bottom: 1px solid #666;
+    padding-top: .5rem;
+    outline: none;
+}
+
+.box-form input.success,
+select.success,
+textarea.success {
+    width: 100%;
+    min-height: 30px;
+    border: none;
+    border-bottom: 2px solid var(--teal);
+    padding-top: .5rem;
+}
+
+.box-form input.danger,
+select.danger,
+textarea.danger {
+    width: 100%;
+    min-height: 30px;
+    border: none;
+    border-bottom: 2px solid var(--red);
+    padding-top: .5rem;
+}
+
+.box-form p {
+    margin: .8rem 0;
+}
+
+.box-form button {
+    float: right;
+    background-color: var(--amber);
+    border: none;
+    width: 95px;
+    height: 45px;
+    margin-top: .5rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.box-form button:hover {
+    box-shadow: 8px 6px 6px rgba(0, 0, 0, .1);
+}
+
+.box-form .fa,
+.fab,
+.fad,
+.fal,
+.far,
+.fas {
+    color: var(--amber);
+}
+
+ul.msg-retorno {
+    width: 100%;
+    background-color: var(--teal);
+    margin-top: .5rem;
+}
+
+ul.msg-retorno li {
+    list-style-type: none;
+    color: var(--off);
+    font-size: 1.1rem;
+    padding: .5rem;
+    border-bottom: 1rem solid #fff;
+}
+
+@media screen and (min-width: 320px) {
+    nav.nav {
+        display: none;
+    }
+    .mobile-hidden {
+        display: none;
+    }
+    .box-form {
+        width: 90%;
+    }
+    .on-tablet {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    nav.nav {
+        display: flex;
+    }
+    .btn-toggle {
+        display: none;
+    }
+    .mobile-hidden {
+        display: flex;
+    }
+    .box-form {
+        width: 80%;
+    }
+    .menu-mobile {
+        display: none;
+    }
+    .on-tablet {
+        display: none;
+    }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>JavaScript - Inicial</title>
+    <meta charset="UTF-8">
+    <!--
+    Formatted for readability
+  -->
+    <meta name="viewport" content="
+    width=device-width,
+    initial-scale=1,
+    minimum-scale=1,
+    maximum-scale=1
+  " />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+        <div class="grid-container ">
+            <div class="grid-100 menu mobile-hidden">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Ib Web Sites">
+                </div>
+                <nav class="nav">
+                    <ul class="">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Serviços</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="row on-tablet">
+                <div class="grid-container">
+                    <div class="grid-100">
+                        <div class="nav-mobile">
+                            <img class="img-mobile" src="img/logoMoobile.png" alt="Ib web Sites">
+                            <i onclick="openSide()" id="toggle" class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-mobile" id="menu-mobile">
+            <ul class="">
+                <li class="close"><i class="fas fa-window-close" onclick="closeSide()"></i></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Serviços</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- FORMULARIO -->
+
+    <section>
+        <div class="grid-container">
+            <div class="box-form">
+                <form id="frm_cadastro" name="form" class="form" method="post" action="sucesso.html">
+                    <div class="row">
+                        <div class="grid-100">
+                            <h1>Cadastro</h1>
+                            <p class="" id="msg"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="grid-50">
+                            <p>Nome:</p>
+                            <i class="fas fa-user"></i><input type="text" id="name" name="name">
+                        </div>
+                        <div class="grid-50">
+                            <p>Email:</p>
+                            <i class="fas fa-envelope-open-text"></i><input type="text" id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="grid-50">
+                            <p>Senha:</p>
+                            <i class="fas fa-lock"></i><input type="password" id="pass" name="pass">
+                        </div>
+                        <div class="grid-50">
+                            <p>Confirmar senha:</p>
+                            <i class="fas fa-lock"></i><input type="password" id="pass_conf" name="nopass_conf">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="grid-50">
+                            <p>Sexo:</p>
+                            <i class="fas fa-venus-mars"></i>
+                            <select name="sexo" id="sexo">
+                                <option value="F">Feminino</option>
+                                <option value="M">Masculino</option>
+                            </select>
+                        </div>
+                        <div class="grid-50">
+                            <p>Data de nascimento:</p>
+                            <i class="far fa-calendar-alt"></i><input type="text" id="data" name="data">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="grid-100">
+                            <p>Mensagem</p>
+                            <i class="fas fa-user-edit"></i>
+                            <textarea id="txt-area">
+
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="grid-100">
+                        <div id="msgText" class="div">
+                            <ul class="msg-retorno">
+                                <li>Preencha todos os campos.</li>
+                            </ul>
+                        </div>
+                        <button type="submit" class="btn">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/validation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>JavaScript - Inicial</title>
+    <meta charset="UTF-8">
+    <!--
+    Formatted for readability
+  -->
+    <meta name="viewport" content="
+    width=device-width,
+    initial-scale=1,
+    minimum-scale=1,
+    maximum-scale=1
+  " />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+        <div class="grid-container ">
+            <div class="grid-100 menu mobile-hidden">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Ib Web Sites">
+                </div>
+                <nav class="nav">
+                    <ul class="">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Serviços</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="row on-tablet">
+                <div class="grid-container">
+                    <div class="grid-100">
+                        <div class="nav-mobile">
+                            <img class="img-mobile" src="img/logoMoobile.png" alt="Ib web Sites">
+                            <i onclick="openSide()" id="toggle" class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-mobile" id="menu-mobile">
+            <ul class="">
+                <li class="close"><i class="fas fa-window-close" onclick="closeSide()"></i></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Serviços</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </div>
+    </header><br>
+
+    <div class="grid-100">
+        <div class="grid-container">
+            <div id="msgText" class="div">
+                <ul class="msg-retorno">
+                    <li>Dados cadastrados com sucesso!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/validation.js"></script>
+
+</body>
+
+</html>
